@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Snake</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+<div class="app">
+  <header>
+    <h1>SNAKE</h1>
+    <div class="scores">
+      <div class="score-box">
+        <div class="label">Score</div>
+        <div class="value" id="score">0</div>
+      </div>
+      <div class="score-box">
+        <div class="label">Best</div>
+        <div class="value" id="best">0</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="board-wrap">
+    <canvas id="board"></canvas>
+    <div class="overlay" id="overlay">
+      <h2 id="overlay-title">Ready to play?</h2>
+      <p id="overlay-msg">Use arrow keys / WASD on desktop, swipe or the on-screen buttons on mobile. Eat the dots, don't hit yourself or the wall.</p>
+      <button id="start-btn">Start Game</button>
+    </div>
+  </div>
+
+  <div class="controls" id="controls">
+    <button class="ctrl-btn c-up" data-dir="up">&#8593;</button>
+    <button class="ctrl-btn c-left" data-dir="left">&#8592;</button>
+    <button class="ctrl-btn c-down" data-dir="down">&#8595;</button>
+    <button class="ctrl-btn c-right" data-dir="right">&#8594;</button>
+  </div>
+
+  <div class="hint">Tap the board or press Space to pause.</div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
